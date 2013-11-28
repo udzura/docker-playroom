@@ -1,0 +1,6 @@
+.librarian
+.vagrant
+.tmp
+tmp
+modules/*
+!modules/.keep
