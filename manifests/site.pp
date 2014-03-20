@@ -1,8 +1,8 @@
 class vagrant {
   include git
-  include docker
-  class { 'golang':
-    package_name => 'golang-weekly'
+  include golang
+  class { 'docker':
+    version => '0.9.0'
   }
 
   rbenv::install { 'vagrant': }
