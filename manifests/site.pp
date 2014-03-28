@@ -6,7 +6,7 @@ class vagrant {
   }
 
   rbenv::install { 'vagrant': }
-  rbenv::compile { '2.0.0-p353':
+  rbenv::compile { '2.1.1':
     user   => 'vagrant',
     global => true
   }
