@@ -14,4 +14,9 @@ RUN yum -y install \
 RUN git clone https://github.com/sstephenson/ruby-build.git
 RUN sh ruby-build/install.sh
 RUN /usr/local/bin/ruby-build 2.1.1 /usr/local/ruby-2.1.1
-CMD /usr/local/ruby-2.1.1/bin/ruby -v
+
+ENV PATH /usr/local/ruby-2.1.1/bin:$PATH
+RUN gem install bundler -v '~> 1.6.0'  --no-ri --no-rdoc
+RUN gem install foreman -v '~> 0.63.0' --no-ri --no-rdoc
+
+CMD ruby -v
